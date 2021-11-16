@@ -12,7 +12,7 @@ header_font = "Arial-16"
 window_width = 800
 """Ширина окна"""
 
-window_height = 800
+window_height = 500
 """Высота окна"""
 
 scale_factor = None
@@ -54,7 +54,7 @@ def scale_y(y):
     **y** — y-координата модели.
     """
 
-    return int(y * scale_factor) + window_height // 2
+    return (int(y*scale_factor) + window_height//2)
 
 
 def create_star_image(space, star):
@@ -80,6 +80,7 @@ def create_planet_image(space, planet):
     **space** — холст для рисования.
     **planet** — объект планеты.
     """
+
     x = scale_x(planet.x)
     y = scale_y(planet.y)
     r = planet.R
